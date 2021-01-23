@@ -7,9 +7,12 @@ import { HeroeService } from "../../services/heroe.service";
   templateUrl: './home.component.html',
   styleUrls: []
 })
+
+
 export class HomeComponent implements OnInit {
   heroes:any[]=[];
   heroe:any[]=[];
+  loading:boolean=false;
 
   constructor(private servicio:HeroeService) { 
 
@@ -25,15 +28,20 @@ export class HomeComponent implements OnInit {
 
   heroeSeleccionado(index:number){
       this.heroe = this.heroes[index];
-      
+  }
+
+  setLoading(bandera:boolean){
+    this.loading = bandera;
   }
 
   actualizar(bandera:boolean){
-    this.servicio.getHeroes().subscribe((data:any)=>{
-      console.log(data);
-      this.heroes = data;
-      this.heroe = data[0];
-     });
+    if(bandera){
+      this.servicio.getHeroes().subscribe((data:any)=>{
+        this.heroes=[];
+        this.heroes = data;
+        this.loading = false;
+       });
+    }
   }
 
 

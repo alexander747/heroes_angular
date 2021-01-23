@@ -44,6 +44,19 @@
   width: 40%;
 }
 
-main {
-  column-count: 2;
+/* --------------------------------------------voto registrado */
+.descripcion-voto-registrado {
+  border-radius: 2%;
+  position: absolute;
+  top: 50%;
+  margin-left: 10%;
+  background: rgba(34, 34, 34, 0.75);
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 33%;
+  width: 40%;
+  font-size: 20px;
+}
+
+.descripcion-voto-registrado button {
+  margin-top: 3%;
 }

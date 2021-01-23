@@ -29,19 +29,19 @@ export class HeroeService {
 
   }
 
-  votar(){
+  votar(id:string, like:string, dislike:string, plike:string, pdislike:string){
     const headers = new HttpHeaders({
       // 'Content-Type':'application/json',
 
     });
 
     const formulario = new FormData();
-        let id = "1";
+        
         formulario.append("id", id);
-        formulario.append("like","20");
-        formulario.append("dislike","80");
-        formulario.append("plike","20");
-        formulario.append("pdislike","80");
+        formulario.append("like",like);
+        formulario.append("dislike",dislike);
+        formulario.append("plike",plike);
+        formulario.append("pdislike",pdislike);
 
         const urlheroes = 'heroes/votar.php';
         return this.http.post(urlheroes, formulario, {headers});

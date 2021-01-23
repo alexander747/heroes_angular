@@ -5,24 +5,45 @@
             <img [src]="heroedetalle.avatar" height="400px" class="card-img" alt="...">
             <div class="card-img-overlay">
               <h5 class="card-title nombre-detalle">{{heroedetalle.name | uppercase}}</h5>
-              <div class="card-text descripcion-detalle contenedor-descripcion">{{heroedetalle['description']}}
-                 
-                  ¿Cúal es tu voto?<br>
-                  <table align="center" border="1" cellpadding="1" cellspacing="1" class="tabla">
-                    <tbody>
-                            <tr>
-                                    <td class="like" style="width: 169px; text-align: center" (click)="votar(true)">
-                                             <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-                                    </td>
-    
-    
-                                    <td style="text-align: center; width: 168px" class="dislike" (click)="votar(false)">
-                                            <i class="fas fa-thumbs-down"></i>
-                                    </td>
-                            </tr>
-                    </tbody>
-                 </table>
+
+              <div [ngSwitch]="votacion">
+                      <div *ngSwitchCase="'sinvotar'">
+                           <!-- detalle votar -->
+                                <div class="card-text descripcion-detalle contenedor-descripcion">{{heroedetalle['description']}}
+                                        ¿Cúal es tu voto?<br>
+                                        <table align="center" border="1" cellpadding="1" cellspacing="1" class="tabla">
+                                        <tbody>
+                                                <tr>
+                                                        <td class="like" (click)="votar(true)">
+                                                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                                        </td>
+                                                        <td class="dislike" (click)="votar(false)">
+                                                                <i class="fas fa-thumbs-down"></i>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                </table>
+                                </div>
+                      </div>
+
+                      <div *ngSwitchCase="'votado'">
+                        <div class="card-text descripcion-voto-registrado">
+                                <div>
+                                        Tu voto <br>
+                                        <strong>ha sido registrado!</strong><br>
+                                        <i class="fa fa-thumbs-up"></i>
+                                </div>
+                                <button class="btn btn-primary">
+                                        Volver a votar
+                                </button>
+                        </div>
+                      </div>
+
               </div>
+
+             
+
+             
            
             
             </div>

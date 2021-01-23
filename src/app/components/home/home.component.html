@@ -1,4 +1,10 @@
-<app-detalle [heroedetalle]="heroe" (refrescar)="actualizar($event)" ></app-detalle>
+
+<app-detalle [heroedetalle]="heroe" (refrescar)="actualizar($event)" (setLoading)="setLoading($event)" ></app-detalle>
+
+<app-loading *ngIf="loading"></app-loading>
+
+
+
 <div class="row"> 
-  <app-targeta [heroe]="heroe" [index]="i" (heroeSeleccionado)="heroeSeleccionado( $event )"  *ngFor="let heroe of heroes; let i = index" class="col-md-3"></app-targeta>
+  <app-targeta [heroe]="heroe" [index]="i" (heroeSeleccionado)="heroeSeleccionado( $event )"  *ngFor="let heroe of heroes; let i = index" class="col-md-4"></app-targeta>
 </div>

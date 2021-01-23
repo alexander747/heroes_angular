@@ -15,6 +15,7 @@ import {ROUTES} from "./app.routes";
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { DetalleComponent } from './components/detalle/detalle.component';
 import { TargetaComponent } from './components/targeta/targeta.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TargetaComponent } from './components/targeta/targeta.component';
     SearchComponent,
     NavbarComponent,
     DetalleComponent,
-    TargetaComponent
+    TargetaComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
