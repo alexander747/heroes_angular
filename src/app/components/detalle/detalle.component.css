@@ -1,0 +1,17 @@
+.tabla {
+  width: 100%;
+
+  border: solid 1px red;
+}
+
+.contenedor-descripcion {
+  padding-top: 5%;
+}
+
+.dislike {
+  background-color: #a8db20;
+}
+
+.like {
+  background-color: #86e1cf;
+}

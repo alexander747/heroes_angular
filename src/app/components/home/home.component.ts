@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HeroeService } from "../../services/heroe.service";
-import { ActivatedRoute }  from "@angular/router";
 
 
 @Component({
@@ -12,7 +11,7 @@ export class HomeComponent implements OnInit {
   heroes:any[]=[];
   heroe:any[]=[];
 
-  constructor(private servicio:HeroeService, private rutas:ActivatedRoute) { 
+  constructor(private servicio:HeroeService) { 
 
     this.servicio.getHeroes().subscribe((data:any)=>{
      console.log(data);
@@ -27,6 +26,14 @@ export class HomeComponent implements OnInit {
   heroeSeleccionado(index:number){
       this.heroe = this.heroes[index];
       
+  }
+
+  actualizar(bandera:boolean){
+    this.servicio.getHeroes().subscribe((data:any)=>{
+      console.log(data);
+      this.heroes = data;
+      this.heroe = data[0];
+     });
   }
 
 

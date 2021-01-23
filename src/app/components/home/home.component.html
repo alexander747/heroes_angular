@@ -1,4 +1,4 @@
-<app-detalle [heroedetalle]="heroe" ></app-detalle>
+<app-detalle [heroedetalle]="heroe" (refrescar)="actualizar($event)" ></app-detalle>
 <div class="row"> 
   <app-targeta [heroe]="heroe" [index]="i" (heroeSeleccionado)="heroeSeleccionado( $event )"  *ngFor="let heroe of heroes; let i = index" class="col-md-3"></app-targeta>
 </div>

@@ -16,7 +16,6 @@ export class HeroeService {
     const headers = new HttpHeaders({
       'Content-Type':'application/json',
     });
-
     const urlheroes = 'heroes/heroes.php';
     // this.http.get(urlheroes, {headers}).subscribe(data=>{
     //   return data;
@@ -26,8 +25,26 @@ export class HeroeService {
     return this.http.get(urlheroes, {headers}).pipe(map(data=>{
       return data["data"];
     }));
+  
 
+  }
 
+  votar(){
+    const headers = new HttpHeaders({
+      // 'Content-Type':'application/json',
+
+    });
+
+    const formulario = new FormData();
+        let id = "1";
+        formulario.append("id", id);
+        formulario.append("like","20");
+        formulario.append("dislike","80");
+        formulario.append("plike","20");
+        formulario.append("pdislike","80");
+
+        const urlheroes = 'heroes/votar.php';
+        return this.http.post(urlheroes, formulario, {headers});
   }
 
 }
