@@ -164,24 +164,32 @@
   }
 }
 
-/* --------------------------------------------voto registrado */
+/* --------------------------------------------voto registrado  y error */
 .descripcion-voto-registrado {
   border-radius: 2%;
   position: absolute;
   top: 25%;
   margin-left: 10%;
   background: rgba(34, 34, 34, 0.75);
-  height: 250px;
+  height: 300px;
   width: 350px;
   font-size: 20px;
-  padding: 15px;
+  padding: 25px;
+}
+
+.table-mensaje-registro tbody tr td {
+  height: 10px;
+  padding: 5px;
 }
 
 .descripcion-voto-registrado p {
-  color: blue;
   font-size: 15px;
 }
 
-/* .descripcion-voto-registrado button {
-  margin-top: 3%;
-} */
+.table-icono i {
+  font-size: 35px;
+}
+
+.contendor-btn-volvervotar {
+  text-align: center;
+}

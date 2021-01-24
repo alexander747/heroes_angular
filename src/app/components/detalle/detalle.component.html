@@ -42,16 +42,31 @@
                       <div *ngSwitchCase="'votado'">
                         <div class="card-text descripcion-voto-registrado">
                                 <div>
-                                        Tu voto <br>
-                                        <strong>ha sido registrado!</strong><br>
-                                        <i class="fa fa-thumbs-up"></i>
+                                        {{heroedetalle.name | uppercase}} <br><br>
                                 </div>
+
+                                <table class="table-mensaje-registro">
+                                        <tbody>
+                                                <tr>
+                                                        <td class="table-icono color-like">
+                                                                <i class="fa fa-thumbs-up"></i>
+                                                        </td>
+                                                        <td class="table-mensaje">
+                                                              Tu voto <br>
+                                                              ha sido registrado!
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                     </table>
+
                                 <p>
                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eum, quaerat fugit harum nam autem velit, expedita tenetur.
                                 </p>
-                                <button class="btn btn-primary" (click)="setEstadoVoto('sinvotar')">
-                                        Volver a votar
-                                </button>
+                                <div class="contendor-btn-volvervotar">
+                                        <button class="btn btn-outline-success" (click)="setEstadoVoto('sinvotar')">
+                                                Volver a votar
+                                        </button>
+                                </div>
                         </div>
                       </div>
 
@@ -62,12 +77,31 @@
                       <div *ngSwitchDefault>
                         <div class="card-text descripcion-voto-registrado">
                                 <div>
-                                      UPS SUCEDIO UN ERROR INESPERADO, REVISA TU CONEXION A INTERNET E INTENTA NUEVAMENTE.
-                                        <i class="fa fa-thumbs-up"></i>
+                                        {{heroedetalle.name | uppercase}} <br><br>
                                 </div>
-                                <button class="btn btn-primary" (click)="setEstadoVoto('sinvotar')">
-                                        Volver a intentarlo.
-                                </button>
+
+                                <table class="table-mensaje-registro">
+                                        <tbody>
+                                                <tr>
+                                                        <td class="table-icono color-dislike">
+                                                                <i class="fa fa-thumbs-down"></i>
+                                                        </td>
+                                                        <td class="table-mensaje">
+                                                              Tu voto <br>
+                                                              no se ha sido registrado!
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                     </table>
+
+                                <p>
+                                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eum, quaerat fugit harum nam autem velit, expedita tenetur.
+                                </p>
+                                <div class="contendor-btn-volvervotar">
+                                        <button class="btn btn-outline-success" (click)="setEstadoVoto('sinvotar')">
+                                                Volver a votar
+                                        </button>
+                                </div>
                         </div>
                       </div>
 
