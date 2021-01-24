@@ -48,8 +48,10 @@
                                 <table class="table-mensaje-registro">
                                         <tbody>
                                                 <tr>
-                                                        <td class="table-icono color-like">
-                                                                <i class="fa fa-thumbs-up"></i>
+                                                        <td class="table-icono" [ngClass]="{'color-like':eleccionvoto, 'color-dislike':!eleccionvoto}">
+                                                                <i *ngIf="eleccionvoto" class="fa fa-thumbs-up"></i>
+                                                                <i *ngIf="!eleccionvoto" class="fa fa-thumbs-down"></i>
+                                                                
                                                         </td>
                                                         <td class="table-mensaje">
                                                               Tu voto <br>
@@ -84,7 +86,7 @@
                                         <tbody>
                                                 <tr>
                                                         <td class="table-icono color-dislike">
-                                                                <i class="fa fa-thumbs-down"></i>
+                                                                <i class="fa fa-exclamation-triangle"></i>
                                                         </td>
                                                         <td class="table-mensaje">
                                                               Tu voto <br>

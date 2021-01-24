@@ -17,6 +17,7 @@ export class DetalleComponent implements OnInit {
  plike:any;
  pdislike:any; 
  votacion:string="sinvotar";
+ eleccionvoto:boolean=true;
 
 
 
@@ -31,6 +32,7 @@ export class DetalleComponent implements OnInit {
   votar(voto:boolean){
     this.setLoading.emit(true);
     this.votacion='votando';
+    this.eleccionvoto=voto;
 
      this.id = this.heroedetalle.id;
      this.like = this.heroedetalle.likes;

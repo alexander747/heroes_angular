@@ -16,6 +16,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { DetalleComponent } from './components/detalle/detalle.component';
 import { TargetaComponent } from './components/targeta/targeta.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
+import { HeroedetalleComponent } from './components/heroedetalle/heroedetalle.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     DetalleComponent,
     TargetaComponent,
     LoadingComponent,
+    HeroedetalleComponent,
   ],
   imports: [
     BrowserModule,
