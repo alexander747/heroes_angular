@@ -8,15 +8,15 @@
                         Ver detalle
                 </a>
         </div>
-        <table border="1" cellpadding="1" cellspacing="1" style="height: 50px">
+        <table>
                 <tbody>
                         <tr>
-                                <td [ngStyle]="{'width':heroe.p_likes +'%' }">
+                                <td [ngStyle]="{'width':heroe.p_likes +'%' }" class="color-like">
                                         {{heroe.p_likes}}% <i class="fa fa-thumbs-up" aria-hidden="true"></i>
                                 </td>
 
 
-                                <td [ngStyle]="{'width':heroe.p_dislike+'%'}" class="dislike">
+                                <td [ngStyle]="{'width':heroe.p_dislike+'%'}" class="color-dislike">
                                        {{heroe.p_dislike}}% <i class="fas fa-thumbs-down"></i>
                                 </td>
                         </tr>

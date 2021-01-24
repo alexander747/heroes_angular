@@ -25,23 +25,124 @@
   left: 10px;
   color: white;
 }
-/* -----------------------------------------detalle */
-.nombre-detalle {
-  position: absolute;
-  top: 40%;
-  margin-left: 10%;
-  background: rgba(34, 34, 34, 0.75);
-  background-color: rgba(0, 0, 0, 0.1);
+/* -----------------------------------------------IMPORTANTE */
+.card-img-overlay {
+  padding: 0;
 }
+
+/* -----------------------------------------------CENTRAR LAS TARGETAS */
+.targetas-padding {
+  padding: 3%;
+}
+
+/* ------------------------------------------------COLORES DE FONDO LIKE Y DISLIKE */
+.color-like {
+  background-color: #1d9781;
+}
+
+.color-dislike {
+  background-color: #f3a106;
+}
+/* --------------------------------------------------DETALLE */
 
 .descripcion-detalle {
   position: absolute;
-  top: 50%;
+  top: 30%;
   margin-left: 10%;
   background: rgba(34, 34, 34, 0.75);
-  background-color: rgba(0, 0, 0, 0.1);
-  height: 30%;
-  width: 40%;
+  height: 50%;
+  width: 25%;
+  font-size: 17px;
+  text-align: justify;
+}
+
+.descripcion-detalle p {
+  padding: 5%;
+}
+
+.detalle-nombre-superheroe {
+  font-size: 25px;
+}
+
+.detalles-opcion-voto {
+  width: 100%;
+}
+
+.detalles-opcion-voto tr {
+  height: 35px;
+}
+
+.detalle-barra-porcentajes {
+  width: 100%;
+  height: 35px;
+  margin-top: 465px;
+}
+
+.detalle-barra-porcentajes tbody {
+  width: 100%;
+}
+
+@media (max-width: 750px) {
+  .detalle-nombre-superheroe {
+    font-size: 20px;
+  }
+  .descripcion-detalle p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 734px) {
+  .detalle-nombre-superheroe {
+    font-size: 20px;
+  }
+  .descripcion-detalle p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 662px) {
+  .detalle-nombre-superheroe {
+    font-size: 20px;
+  }
+  .descripcion-detalle p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .detalle-nombre-superheroe {
+    font-size: 20px;
+  }
+  .descripcion-detalle p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .detalle-nombre-superheroe {
+    font-size: 20px;
+  }
+  .descripcion-detalle p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 410px) {
+  .detalle-nombre-superheroe {
+    font-size: 19px;
+  }
+  .descripcion-detalle p {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 380px) {
+  .detalle-nombre-superheroe {
+    font-size: 15px;
+  }
+  .descripcion-detalle p {
+    font-size: 11px;
+  }
 }
 
 /* --------------------------------------------voto registrado */
@@ -51,7 +152,6 @@
   top: 50%;
   margin-left: 10%;
   background: rgba(34, 34, 34, 0.75);
-  background-color: rgba(0, 0, 0, 0.1);
   height: 33%;
   width: 40%;
   font-size: 20px;

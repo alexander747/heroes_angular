@@ -1,29 +1,45 @@
 <div class="row botton-detalle" >
     <div class="col-md-12">
      
-        <div class="card bg-dark text-white" >
-            <img [src]="heroedetalle.avatar" height="400px" class="card-img" alt="...">
+        <div class="card bg-dark text-white targeta-bottom" >
+            <img [src]="heroedetalle.avatar" height="500px" class="card-img" alt="...">
             <div class="card-img-overlay">
-              <h5 class="card-title nombre-detalle">{{heroedetalle.name | uppercase}}</h5>
+             
 
               <div [ngSwitch]="votacion">
                       <div *ngSwitchCase="'sinvotar'">
                            <!-- detalle votar -->
-                                <div class="card-text descripcion-detalle contenedor-descripcion">{{heroedetalle['description']}}
-                                        ¿Cúal es tu voto?<br>
-                                        <table align="center" border="1" cellpadding="1" cellspacing="1" class="tabla">
-                                        <tbody>
-                                                <tr>
-                                                        <td class="like" (click)="votar(true)">
-                                                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-                                                        </td>
-                                                        <td class="dislike" (click)="votar(false)">
-                                                                <i class="fas fa-thumbs-down"></i>
-                                                        </td>
-                                                </tr>
-                                        </tbody>
-                                </table>
+                                <div class="card-text descripcion-detalle">
+                                        <p>
+                                                <span class="detalle-nombre-superheroe">{{heroedetalle.name | uppercase}}?</span><br>
+                                                {{heroedetalle['description']}} 
+                                                 <br>
+
+                                                 <a href="">Mas información</a>
+
+                                                 <br><br>
+
+                                               <span>¿Cúal es tu voto?</span>
+                                               <br>
+
+                                        </p>
+
+                                        <table align="center" border="1" cellpadding="1" cellspacing="1" class="detalles-opcion-voto">
+                                                <tbody>
+                                                        <tr>
+                                                                <td class="color-like" (click)="votar(true)">
+                                                                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                                                </td>
+                                                                <td class="color-dislike" (click)="votar(false)">
+                                                                        <i class="fas fa-thumbs-down"></i>
+                                                                </td>
+                                                        </tr>
+                                                </tbody>
+                                        </table>
+
+                                       
                                 </div>
+                              
                       </div>
 
                       <div *ngSwitchCase="'votado'">
@@ -33,20 +49,50 @@
                                         <strong>ha sido registrado!</strong><br>
                                         <i class="fa fa-thumbs-up"></i>
                                 </div>
-                                <button class="btn btn-primary">
+                                <button class="btn btn-primary" (click)="setEstadoVoto('sinvotar')">
                                         Volver a votar
                                 </button>
                         </div>
                       </div>
 
+                      <div *ngSwitchCase="'votando'">
+                      <!-- <app-loading></app-loading> -->
+                      <h3>votando...</h3>
+                      </div>
+
+                      <!-- ERROR -->
+                      <div *ngSwitchDefault>
+                        <div class="card-text descripcion-voto-registrado">
+                                <div>
+                                      UPS SUCEDIO UN ERROR INESPERADO, REVISA TU CONEXION A INTERNET E INTENTA NUEVAMENTE.
+                                        <i class="fa fa-thumbs-up"></i>
+                                </div>
+                                <button class="btn btn-primary" (click)="setEstadoVoto('sinvotar')">
+                                        Volver a intentarlo.
+                                </button>
+                        </div>
+                      </div>
+
+                      <table class="detalle-barra-porcentajes">
+                        <tbody>
+                                <tr>
+                                        <td [ngStyle]="{'width':heroedetalle.p_likes +'%' }" class="color-like">
+                                                {{heroedetalle.p_likes}}% <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                        </td>
+        
+        
+                                        <td [ngStyle]="{'width':heroedetalle.p_dislike+'%'}" class="color-dislike">
+                                               {{heroedetalle.p_dislike}}% <i class="fas fa-thumbs-down"></i>
+                                        </td>
+                                </tr>
+                        </tbody>
+                     </table>
+                    
               </div>
-
-             
-
-             
-           
+            
             
             </div>
+          
          </div>
     </div>
 </div>
