@@ -204,3 +204,14 @@
 .targeta-descripcion {
   padding-left: 8%;
 }
+
+.contenedor-descripcion-heroe {
+  background-color: black;
+  color: white;
+  font-family: "Merriweather", serif;
+  padding: 20px;
+}
+
+.masinformacion {
+  color: white;
+}

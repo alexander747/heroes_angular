@@ -6,7 +6,6 @@ import { HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { SearchComponent } from './components/search/search.component';
 
 
 
@@ -22,7 +21,6 @@ import { HeroedetalleComponent } from './components/heroedetalle/heroedetalle.co
   declarations: [
     AppComponent,
     HomeComponent,
-    SearchComponent,
     NavbarComponent,
     DetalleComponent,
     TargetaComponent,

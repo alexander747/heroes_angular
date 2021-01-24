@@ -42,9 +42,22 @@ export class HeroeService {
         formulario.append("dislike",dislike);
         formulario.append("plike",plike);
         formulario.append("pdislike",pdislike);
-
+ 
         const urlheroes = 'heroes/votar.php';
         return this.http.post(urlheroes, formulario, {headers});
+  }
+
+  getHeroe(heroe:string){
+  
+    const headers = new HttpHeaders({
+      // 'Content-Type':'application/json',
+    });
+
+    const form = new FormData();
+        
+    form.append("heroe", heroe);
+    const urlheroe = 'heroes/heroe.php';
+    return this.http.post(urlheroe, form,{headers});
   }
 
 }
