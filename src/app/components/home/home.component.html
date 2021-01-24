@@ -7,6 +7,6 @@
 <div class="targetas-padding">
 <div class="row"> 
   <h2>Super Héroes</h2>
-  <app-targeta [heroe]="heroe" [index]="i" (heroeSeleccionado)="heroeSeleccionado( $event )"  *ngFor="let heroe of heroes; let i = index" class="col-md-6"></app-targeta>
+  <app-targeta [heroe]="heroe" [index]="i" (heroeSeleccionado)="heroeSeleccionado( $event )"  *ngFor="let heroe of heroes; let i = index" class="col-md-6 targeta-unica"></app-targeta>
 </div>
 </div>

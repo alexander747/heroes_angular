@@ -1,29 +1,3 @@
-/* .botton-detalle {
-  margin-bottom: 13px;
-}
-
-.targeta-bottom {
-  margin-bottom: 5px;
-}
-
-.nombre {
-  position: absolute;
-  top: 55%;
-  left: 10px;
-}
-
-.descripcion {
-  position: absolute;
-  top: 50%;
-  left: 10px;
-}
-
-.btn-detalle {
-  position: absolute;
-  top: 75%;
-  left: 10px;
-  color: white;
-} */
 /* -----------------------------------------------IMPORTANTE */
 .card-img-overlay {
   padding: 0;
@@ -42,6 +16,37 @@
 .color-dislike {
   background-color: #f3a106;
 }
+
+/* --------------------------------------------voto registrado  y error */
+.descripcion-voto-registrado {
+  border-radius: 2%;
+  position: absolute;
+  top: 25%;
+  margin-left: 10%;
+  background: rgba(34, 34, 34, 0.75);
+  height: 300px;
+  width: 350px;
+  font-size: 20px;
+  padding: 25px;
+}
+
+.table-mensaje-registro tbody tr td {
+  height: 10px;
+  padding: 5px;
+}
+
+.descripcion-voto-registrado p {
+  font-size: 15px;
+}
+
+.table-icono i {
+  font-size: 35px;
+}
+
+.contendor-btn-volvervotar {
+  text-align: center;
+}
+
 /* --------------------------------------------------DETALLE */
 
 .descripcion-detalle {
@@ -107,7 +112,6 @@
 
   .descripcion-detalle p {
     font-size: 16px;
-    color: blue;
   }
   .detalles-opcion-voto {
     margin-top: 30px;
@@ -122,11 +126,14 @@
 
   .descripcion-detalle p {
     font-size: 14px;
-    color: red;
   }
 
   .detalles-opcion-voto {
     margin-top: 40px;
+  }
+  .descripcion-voto-registrado {
+    width: 260px;
+    font-size: 12px;
   }
 }
 
@@ -138,11 +145,14 @@
 
   .descripcion-detalle p {
     font-size: 13px;
-    color: blue;
   }
 
   .detalles-opcion-voto {
-    margin-top: 45px;
+    margin-top: 27px;
+  }
+  .descripcion-voto-registrado {
+    width: 230px;
+    font-size: 12px;
   }
 }
 
@@ -157,39 +167,40 @@
 
   .descripcion-detalle p {
     font-size: 12px;
-    color: red;
   }
   .detalles-opcion-voto {
     margin-top: 55px;
   }
+
+  .descripcion-voto-registrado {
+    width: 180px;
+    height: 320px;
+    font-size: 3px;
+  }
 }
 
-/* --------------------------------------------voto registrado  y error */
-.descripcion-voto-registrado {
-  border-radius: 2%;
-  position: absolute;
-  top: 25%;
-  margin-left: 10%;
-  background: rgba(34, 34, 34, 0.75);
-  height: 300px;
-  width: 350px;
-  font-size: 20px;
-  padding: 25px;
+/* -----------------------------------targetas */
+
+.targeta-unica {
+  margin-bottom: 12px;
 }
 
-.table-mensaje-registro tbody tr td {
-  height: 10px;
-  padding: 5px;
+.targeta-btn-detalle {
+  position: static;
+  margin-left: 8%;
+  margin-top: 5%;
 }
 
-.descripcion-voto-registrado p {
-  font-size: 15px;
+.targeta-nombre-superheroe {
+  width: 80%;
+  position: static;
+  margin-top: 210px;
 }
 
-.table-icono i {
-  font-size: 35px;
+.targeta-nombre-heroe {
+  font-size: 25px;
 }
 
-.contendor-btn-volvervotar {
-  text-align: center;
+.targeta-descripcion {
+  padding-left: 8%;
 }

@@ -3,7 +3,7 @@ import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 @Component({
   selector: 'app-targeta',
   templateUrl: './targeta.component.html',
-  styleUrls: ['./targeta.component.css']
+  styleUrls: []
 })
 export class TargetaComponent implements OnInit {
 

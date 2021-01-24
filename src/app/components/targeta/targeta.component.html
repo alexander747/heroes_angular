@@ -1,28 +1,50 @@
 
-<div class="card bg-dark text-white targeta-bottom" >
-        <img  height="400px" class="card-img" alt="..." [src]="heroe.avatar">
-        <div class="card-img-overlay">
-                <h5 class="card-title nombre-detalle">{{heroe.name}}</h5>
-                <p class="card-text descripcion">{{heroe.description}}</p>
-                <a class="btn btn-outline-success btn-detalle" (click)="verHeroe()">
-                        Ver detalle
-                </a>
-        </div>
-        <table>
-                <tbody>
-                        <tr>
-                                <td [ngStyle]="{'width':heroe.p_likes +'%' }" class="color-like">
-                                        {{heroe.p_likes}}% <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-                                </td>
+<div class="card bg-dark text-white" >
+     
+                <img  height="400px" class="card-img" alt="..." [src]="heroe.avatar">
+
+                <div class="card-img-overlay targeta-detalles">
+                        <table class="targeta-nombre-superheroe">
+                                <tbody>
+                                        <tr>
+                                                
+                                                <td *ngIf="heroe.p_likes >= '50'" class="color-like" [ngStyle]="{width:10+'%'}">
+                                                        <i  class="fas fa-thumbs-up "></i>
+                                                </td >
+
+                                                <td *ngIf="heroe.p_likes < '50'" class="color-dislike" [ngStyle]="{width:10+'%'}">
+                                                        <i   class="fa fa-thumbs-down " aria-hidden="true"></i> 
+                                                </td>
+
+                                                <td class="targeta-nombre-heroe">
+                                                        {{heroe.name | uppercase}}
+                                                </td>
+                                        </tr>
+                                </tbody>
+                        </table>
+
+                        <p class="card-text targeta-descripcion"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, maiores dolorem reprehenderit. </p>
+
+                        <a class="btn btn-outline-warning targeta-btn-detalle" (click)="verHeroe()">
+                                Ver detalle
+                        </a>
+                </div>
+
+                <table>
+                        <tbody>
+                                <tr>
+                                        <td [ngStyle]="{'width':heroe.p_likes +'%' }" class="color-like">
+                                                {{heroe.p_likes}}% <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                        </td>
 
 
-                                <td [ngStyle]="{'width':heroe.p_dislike+'%'}" class="color-dislike">
-                                       {{heroe.p_dislike}}% <i class="fas fa-thumbs-down"></i>
-                                </td>
-                        </tr>
-                </tbody>
-        </table>
-
+                                        <td [ngStyle]="{'width':heroe.p_dislike+'%'}" class="color-dislike">
+                                        {{heroe.p_dislike}}% <i class="fas fa-thumbs-down"></i>
+                                        </td>
+                                </tr>
+                        </tbody>
+                </table>
+        
 </div>
 
     
