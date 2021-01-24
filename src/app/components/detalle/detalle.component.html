@@ -24,23 +24,20 @@
 
                                         </p>
 
-                                        <table align="center" border="1" cellpadding="1" cellspacing="1" class="detalles-opcion-voto">
-                                                <tbody>
-                                                        <tr>
-                                                                <td class="color-like" (click)="votar(true)">
-                                                                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-                                                                </td>
-                                                                <td class="color-dislike" (click)="votar(false)">
-                                                                        <i class="fas fa-thumbs-down"></i>
-                                                                </td>
-                                                        </tr>
-                                                </tbody>
-                                        </table>
-
-                                       
+                                          <table align="center" border="1" cellpadding="1" cellspacing="1" class="detalles-opcion-voto">
+                                                  <tbody>
+                                                          <tr>
+                                                                  <td class="color-like" (click)="votar(true)">
+                                                                          <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                                                  </td>
+                                                                  <td class="color-dislike" (click)="votar(false)">
+                                                                          <i class="fas fa-thumbs-down"></i>
+                                                                  </td>
+                                                          </tr>
+                                                  </tbody>
+                                          </table>
                                 </div>
-                              
-                      </div>
+                       </div>
 
                       <div *ngSwitchCase="'votado'">
                         <div class="card-text descripcion-voto-registrado">
@@ -49,6 +46,9 @@
                                         <strong>ha sido registrado!</strong><br>
                                         <i class="fa fa-thumbs-up"></i>
                                 </div>
+                                <p>
+                                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eum, quaerat fugit harum nam autem velit, expedita tenetur.
+                                </p>
                                 <button class="btn btn-primary" (click)="setEstadoVoto('sinvotar')">
                                         Volver a votar
                                 </button>
@@ -56,8 +56,6 @@
                       </div>
 
                       <div *ngSwitchCase="'votando'">
-                      <!-- <app-loading></app-loading> -->
-                      <h3>votando...</h3>
                       </div>
 
                       <!-- ERROR -->
@@ -87,12 +85,8 @@
                                 </tr>
                         </tbody>
                      </table>
-                    
               </div>
-            
-            
             </div>
-          
          </div>
     </div>
 </div>

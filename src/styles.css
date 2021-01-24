@@ -1,5 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-.botton-detalle {
+/* .botton-detalle {
   margin-bottom: 13px;
 }
 
@@ -24,7 +23,7 @@
   top: 75%;
   left: 10px;
   color: white;
-}
+} */
 /* -----------------------------------------------IMPORTANTE */
 .card-img-overlay {
   padding: 0;
@@ -50,10 +49,11 @@
   top: 30%;
   margin-left: 10%;
   background: rgba(34, 34, 34, 0.75);
-  height: 50%;
-  width: 25%;
-  font-size: 17px;
+  height: 250px;
+  width: 450px;
+  font-size: 18px;
   text-align: justify;
+  font-family: "Open Sans Condensed", sans-serif;
 }
 
 .descripcion-detalle p {
@@ -66,6 +66,7 @@
 
 .detalles-opcion-voto {
   width: 100%;
+  margin-top: 35px;
 }
 
 .detalles-opcion-voto tr {
@@ -82,66 +83,84 @@
   width: 100%;
 }
 
-@media (max-width: 750px) {
-  .detalle-nombre-superheroe {
-    font-size: 20px;
-  }
-  .descripcion-detalle p {
-    font-size: 17px;
+.detalle-barra-porcentajes tbody tr td {
+  padding-left: 55px;
+}
+
+@media (max-width: 1200px) {
+  .detalles-opcion-voto {
+    margin-top: 30px;
   }
 }
 
-@media (max-width: 734px) {
-  .detalle-nombre-superheroe {
-    font-size: 20px;
+@media (max-width: 1024px) {
+  .detalles-opcion-voto {
+    margin-top: 30px;
   }
+}
+
+@media (max-width: 768px) {
+  .descripcion-detalle {
+    height: 220px;
+    width: 280px;
+  }
+
   .descripcion-detalle p {
     font-size: 16px;
+    color: blue;
+  }
+  .detalles-opcion-voto {
+    margin-top: 30px;
   }
 }
 
-@media (max-width: 662px) {
-  .detalle-nombre-superheroe {
-    font-size: 20px;
+@media (max-width: 480px) {
+  .descripcion-detalle {
+    height: 220px;
+    width: 260px;
   }
-  .descripcion-detalle p {
-    font-size: 15px;
-  }
-}
 
-@media (max-width: 600px) {
-  .detalle-nombre-superheroe {
-    font-size: 20px;
-  }
   .descripcion-detalle p {
     font-size: 14px;
+    color: red;
+  }
+
+  .detalles-opcion-voto {
+    margin-top: 40px;
   }
 }
 
-@media (max-width: 500px) {
-  .detalle-nombre-superheroe {
-    font-size: 20px;
+@media (max-width: 320px) {
+  .descripcion-detalle {
+    height: 200px;
+    width: 200px;
   }
+
+  .descripcion-detalle p {
+    font-size: 13px;
+    color: blue;
+  }
+
+  .detalles-opcion-voto {
+    margin-top: 45px;
+  }
+}
+
+@media (max-width: 228px) {
+  .descripcion-detalle {
+    height: 200px;
+    width: 130px;
+  }
+  .detalle-nombre-superheroe {
+    font-size: 14px;
+  }
+
   .descripcion-detalle p {
     font-size: 12px;
+    color: red;
   }
-}
-
-@media (max-width: 410px) {
-  .detalle-nombre-superheroe {
-    font-size: 19px;
-  }
-  .descripcion-detalle p {
-    font-size: 11px;
-  }
-}
-
-@media (max-width: 380px) {
-  .detalle-nombre-superheroe {
-    font-size: 15px;
-  }
-  .descripcion-detalle p {
-    font-size: 11px;
+  .detalles-opcion-voto {
+    margin-top: 55px;
   }
 }
 
@@ -149,14 +168,20 @@
 .descripcion-voto-registrado {
   border-radius: 2%;
   position: absolute;
-  top: 50%;
+  top: 25%;
   margin-left: 10%;
   background: rgba(34, 34, 34, 0.75);
-  height: 33%;
-  width: 40%;
+  height: 250px;
+  width: 350px;
   font-size: 20px;
+  padding: 15px;
 }
 
-.descripcion-voto-registrado button {
-  margin-top: 3%;
+.descripcion-voto-registrado p {
+  color: blue;
+  font-size: 15px;
 }
+
+/* .descripcion-voto-registrado button {
+  margin-top: 3%;
+} */
