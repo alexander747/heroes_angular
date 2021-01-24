@@ -17,7 +17,6 @@ export class HomeComponent implements OnInit {
   constructor(private servicio:HeroeService) { 
 
     this.servicio.getHeroes().subscribe((data:any)=>{
-     console.log(data);
      this.heroes = data;
      this.heroe = data[0];
     });
@@ -37,9 +36,14 @@ export class HomeComponent implements OnInit {
   actualizar(bandera:boolean){
     if(bandera){
       this.servicio.getHeroes().subscribe((data:any)=>{
-        this.heroes=[];
-        this.heroes = data;
-        this.loading = false;
+          this.loading = false;
+          this.heroes=[];
+          this.heroes = data;
+          for(let i in data){
+            if(data[i].id == this.heroe['id']){
+                this.heroe = data[i];
+            }
+          }
        });
     }
   }

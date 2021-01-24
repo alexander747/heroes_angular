@@ -13,23 +13,23 @@ export class HeroeService {
   constructor(private http:HttpClient) { }
 
    getHeroes(){
-    const headers = new HttpHeaders({
-      'Content-Type':'application/json',
-    });
-    const urlheroes = 'heroes/heroes.php';
-    // this.http.get(urlheroes, {headers}).subscribe(data=>{
-    //   return data;
-    // });
+        const headers = new HttpHeaders({
+          'Content-Type':'application/json',
+        });
+        const urlheroes = 'heroes/heroes.php';
+        return this.http.get(urlheroes, {headers}).pipe(map(data=>{
+          console.log(data['data']);
+          
+          return data["data"];
+        }));
+    }
 
-    // return this.http.get(urlheroes, {headers});
-    return this.http.get(urlheroes, {headers}).pipe(map(data=>{
-      return data["data"];
-    }));
-  
 
-  }
 
   votar(id:string, like:string, dislike:string, plike:string, pdislike:string){
+
+    console.log("id ", id, " likes ", like, " no likes ", dislike, " porcentaje likes ", plike, " pocentaje dislike ", pdislike);
+    
     const headers = new HttpHeaders({
       // 'Content-Type':'application/json',
 

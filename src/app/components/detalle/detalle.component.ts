@@ -1,4 +1,3 @@
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { HeroeService } from "../../services/heroe.service";
 
@@ -53,7 +52,7 @@ export class DetalleComponent implements OnInit {
   
     this.servicio.votar(this.id.toString(), this.like.toString(), this.dislike.toString(), this.plike.toString(), this.pdislike.toString()).subscribe((data:any)=>{
       this.refrescar.emit(true);
-      console.log(data);
+       this.reiniciarDatos();
       if(data.respuesta==='BIEN'){
         this.votacion='votado';
       }else{
@@ -66,6 +65,14 @@ export class DetalleComponent implements OnInit {
 
   setEstadoVoto(bandera:string){
       this.votacion=bandera;
+  }
+
+  reiniciarDatos(){
+    this.id="";
+    this.like="";
+    this.dislike="";
+    this.plike="";
+    this.pdislike="";
   }
 
 
