@@ -18,8 +18,6 @@ export class HeroeService {
         });
         const urlheroes = 'heroes/heroes.php';
         return this.http.get(urlheroes, {headers}).pipe(map(data=>{
-          console.log(data['data']);
-          
           return data["data"];
         }));
     }
@@ -28,11 +26,7 @@ export class HeroeService {
 
   votar(id:string, like:string, dislike:string, plike:string, pdislike:string){
 
-    console.log("id ", id, " likes ", like, " no likes ", dislike, " porcentaje likes ", plike, " pocentaje dislike ", pdislike);
-    
     const headers = new HttpHeaders({
-      // 'Content-Type':'application/json',
-
     });
 
     const formulario = new FormData();
@@ -48,13 +42,9 @@ export class HeroeService {
   }
 
   getHeroe(heroe:string){
-  
     const headers = new HttpHeaders({
-      // 'Content-Type':'application/json',
     });
-
     const form = new FormData();
-        
     form.append("heroe", heroe);
     const urlheroe = 'heroes/heroe.php';
     return this.http.post(urlheroe, form,{headers});

@@ -25,3 +25,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+Para el manejo de datos se creo un servicio que apunta hacia una api creada en el lenjuaje php, el servicio se encuentra dentro de la carpeta services.
+El component home carga los componentes de las targetas, el loading y el componente para votar.
+El manejo de los datos se realizo en su mayoria por aproximación por template ya que la aplicacion no amerito hacerla aproximación por data por su tamaño.
