@@ -17,7 +17,7 @@ Se utilizó css puro ya que el proyecto es pequeño además de que esto ayuda a 
 
 tener instalado node js.
 tener instalado angular cli.
-node install
+node install.
 ng serve -o
 
 ## Development server
