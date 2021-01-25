@@ -1,4 +1,4 @@
-## Importante
+# Importante
 
 Para el manejo de datos se creó un servicio que apunta hacia una api creada en el lenguaje php, el servicio se encuentra dentro de la carpeta services, se creó un archivo de nombre karma.conf.json ubicado en la raíz del proyecto necesario para tener acceso a la api desde el puerto local 4200 de angular el cual es llamado desde el archivo angular.json en test linea 80.
 
