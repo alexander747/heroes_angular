@@ -9,7 +9,8 @@ Para el manejo de datos se creó un servicio que apunta hacia una api creada en 
 El component home carga los componentes de las tarjetas, el loading y el componente para votar.
 El manejo de los datos se realizó en su mayoría por aproximación por template ya que la aplicación no amerito hacerla aproximación por data por su tamaño.
 
-#Porque css
+# Porque css
+
 Se utilizó css puro ya que el proyecto es pequeño además de que esto ayuda a que se compile más rápido.
 
 # Arrancar el proyecto
