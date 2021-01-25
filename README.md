@@ -1,10 +1,14 @@
 ## Importante
 
-Para el manejo de datos se creo un servicio que apunta hacia una api creada en el lenjuaje php, el servicio se encuentra dentro de la carpeta services, se creo un archivo de nombre karma.conf.json ubicado en la raiz del proyecto necesario para tener acceso a la api desde el puerto local 4200 de angular el cual es llamado desde el archivo angular.json en test linea 80.
+Para el manejo de datos se creó un servicio que apunta hacia una api creada en el lenguaje php, el servicio se encuentra dentro de la carpeta services, se creó un archivo de nombre karma.conf.json ubicado en la raíz del proyecto necesario para tener acceso a la api desde el puerto local 4200 de angular el cual es llamado desde el archivo angular.json en test linea 80.
 
-El component home carga los componentes de las targetas, el loading y el componente para votar.
-El manejo de los datos se realizo en su mayoria por aproximación por template ya que la aplicacion no amerito hacerla aproximación por data por su tamaño.
+El component home carga los componentes de las tarjetas, el loading y el componente para votar.
+El manejo de los datos se realizó en su mayoría por aproximación por template ya que la aplicación no amerito hacerla aproximación por data por su tamaño.
 
+#Porque css
+Se utilizó css puro ya que el proyecto es pequeño además de que esto ayuda a que se compile más rápido.
+
+#Arrancar el proyecto
 Pasos para arrancar el proyecto
 tener instalado node js
 tener instalado angular cli
