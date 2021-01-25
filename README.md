@@ -8,8 +8,8 @@ El manejo de los datos se realizó en su mayoría por aproximación por template
 #Porque css
 Se utilizó css puro ya que el proyecto es pequeño además de que esto ayuda a que se compile más rápido.
 
-#Arrancar el proyecto
-Pasos para arrancar el proyecto
+# Arrancar el proyecto
+
 tener instalado node js
 tener instalado angular cli
 node install
